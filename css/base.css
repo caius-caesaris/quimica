@@ -1,7 +1,49 @@
 header {
-    height: 100px;
+    height: 75px;
     background-color: var(--background-secondary);
+
+    position: sticky;
+    top: -75px;
+    z-index: 2;
 
     display: flex;
     align-items: center;
+}
+
+nav {
+    background-color: var(--background-secondary);
+    width: 100vw;
+    height: 4vh;
+    
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100%;
+}
+
+h1 {
+    color: var(--title-color);
+    margin: 21px;
+}
+
+h2 {
+    margin: 0;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+section {
+    width: 95vw;
+    margin: 20px auto;
+    padding: 10px;
+
+    border-radius: var(--normal-border-radius);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)
 }
