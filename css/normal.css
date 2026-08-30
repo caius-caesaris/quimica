@@ -15,7 +15,6 @@ Use a better box model (opinionated).
 ::after {
     box-sizing: border-box;
 }
-
 html {
     /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -23,12 +22,6 @@ html {
     -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
     tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
 }
-
-/*
-Sections
-========
-*/
-
 body {
     margin: 0; /* Remove the margin in all browsers. */
 }
@@ -79,11 +72,9 @@ sup {
     position: relative;
     vertical-align: baseline;
 }
-
 sub {
     bottom: -0.25em;
 }
-
 sup {
     top: -0.5em;
 }
@@ -185,16 +176,6 @@ Remove the inner padding in Chrome and Safari on macOS.
     -webkit-appearance: button; /* 1 */
     font: inherit; /* 2 */
 }
-
-/*
-Interactive
-===========
-*/
-
-/*
-Add the correct display in Chrome and Safari.
-*/
-
 summary {
     display: list-item;
 }
