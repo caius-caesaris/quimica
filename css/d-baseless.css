@@ -1,0 +1,34 @@
+h1 {
+    color: var(--title-color);
+    margin: 21px;
+}
+
+h2 {
+    margin: 0;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+hr {
+    border: 1px solid;
+    border-color: rgb(0, 0, 0);
+}
+
+section {
+    width: 95vw;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--background-main);
+
+    border-radius: var(--normal-border-radius);
+    box-shadow: var(--shadow);
+    scroll-margin-top: 40px;
+}
+
+footer p {
+    color: var(--title-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
