@@ -41,6 +41,8 @@ footer {
     background-color: var(--background-secondary);
     padding: 10px;
 
+    box-shadow: var(--shadow);
+
     display: flex;
     align-items: center;
     justify-content: center;
