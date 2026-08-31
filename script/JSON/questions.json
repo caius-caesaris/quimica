@@ -1,14 +1,29 @@
 {
     "questions": [
         {
-            "description": "Questão 1",
-            "options": ["Opção 1", "Opção 2", "Opção 3", "Opção 4"],
+            "description": "O Césio-137 é?",
+            "options": [
+                "Um isótopo radioativo",
+                "Um metal",
+                "Um não-metal",
+                "Uma base"
+            ],
             "correct": 0
         },
         {
-            "description": "Questão 2",
-            "options": ["Opção 1", "Opção 2", "Opção 3", "Opção 4"],
+            "description": "Qual a fórmula do Césio-137?",
+            "options": ["H₂O", "SiO₂", "C", "CsCl"],
             "correct": 3
+        },
+        {
+            "description": "O Césio-137 é?",
+            "options": [
+                "Uma base",
+                "Um metal",
+                "Um sal",
+                "Um ácido"
+            ],
+            "correct": 2
         }
     ]
 }
