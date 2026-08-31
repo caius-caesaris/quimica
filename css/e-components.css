@@ -5,16 +5,24 @@
 
     align-self: center;
     justify-self: center;
+
+    transition: transform 0.2s ease-in-out;
 }
 
-.iframe {
-    width: 100%;
+.menu-item:hover {
+    transform: scale(1.1);
+}
 
+.imagem {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.iframe iframe {
-    width: min(854px, 50%);
+.imagem img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.imagem img:hover {
+    transform: scale(1.025);
 }
