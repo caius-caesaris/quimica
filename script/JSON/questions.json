@@ -17,12 +17,7 @@
         },
         {
             "description": "O Césio-137 é?",
-            "options": [
-                "Uma base",
-                "Um metal",
-                "Um sal",
-                "Um ácido"
-            ],
+            "options": ["Uma base", "Um metal", "Um sal", "Um ácido"],
             "correct": 2
         }
     ]

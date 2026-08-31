@@ -1,4 +1,4 @@
-import questionsJSON from "./JSON/questions.json" with { type: "json" }
+import questionsJSON from "./JSON/questions.json" with { type: "json" };
 
 const MAX_QUESTIONS = 5
 
