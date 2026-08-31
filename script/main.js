@@ -1,4 +1,4 @@
-import normalQuestions from "./JSON/normalQuestions.json" with { type: "json" }
+import questionsJSON from "./JSON/questions.json" with { type: "json" }
 
 const MAX_QUESTIONS = 5
 
@@ -11,7 +11,7 @@ function shuffle(array) {
     return copy
 }
 
-const selectedQuestions = shuffle(normalQuestions.questions).slice(0, MAX_QUESTIONS)
+const selectedQuestions = shuffle(questionsJSON.questions).slice(0, MAX_QUESTIONS)
 
 let currentIndex = 0
 let corrects = 0
