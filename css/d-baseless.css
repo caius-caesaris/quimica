@@ -16,6 +16,11 @@ hr {
     border-color: rgb(0, 0, 0);
 }
 
+img {
+    width: 50%;
+    height: auto;
+}
+
 section {
     width: 95vw;
     margin: 20px auto;
