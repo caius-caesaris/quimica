@@ -1,24 +1,34 @@
 {
     "questions": [
         {
-            "description": "O Césio-137 é?",
+            "description": "O que causou o acidente radioativo em Goiânia?",
             "options": [
-                "Um isótopo radioativo",
-                "Um metal",
-                "Um não-metal",
-                "Uma base"
+                "Um isótopo radioativo do césio",
+                "A substância cloreto de césio",
+                "Uma máquina de radioterapia",
+                "Nenhuma das anteriores"
             ],
             "correct": 0
         },
         {
-            "description": "Qual a fórmula do Césio-137?",
+            "description": "Qual a fórmula química do cloreto de césio?",
             "options": ["H₂O", "SiO₂", "C", "CsCl"],
             "correct": 3
         },
         {
-            "description": "O Césio-137 é?",
-            "options": ["Uma base", "Um metal", "Um sal", "Um ácido"],
+            "description": "Como classificamos o cloreto de césio?",
+            "options": ["Hidróxido", "Ácido", "Óxido", "Ânion"],
             "correct": 2
+        },
+        {
+            "description": "Das alternativas abaixo, qual se trata de uma aplicação real do cloreto de césio?",
+            "options": [
+                "Geração de energia elétrica nuclear",
+                "Produção de água mineral",
+                "Emissão de raios gama",
+                "Criação de vidros que não conduzem eletricidade"
+            ],
+            "correct": 1
         }
     ]
 }
