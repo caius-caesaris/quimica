@@ -1,17 +1,17 @@
-import questionsJSON from "./JSON/questions.json" with { type: "json" };
+import questionsJSON from "./JSON/questions.json" with { type: "json" }
 
 const MAX_QUESTIONS = 5
 
 function shuffle(array) {
     const copy = [...array]
     for (let i = copy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
+        let j = Math.floor(Math.random() * (i + 1))
         ;[copy[i], copy[j]] = [copy[j], copy[i]]
     }
     return copy
 }
 
-const selectedQuestions = shuffle(questionsJSON.questions).slice(0, MAX_QUESTIONS)
+let selectedQuestions = shuffle(questionsJSON.questions).slice(0, MAX_QUESTIONS)
 
 let currentIndex = 0
 let corrects = 0
@@ -47,9 +47,9 @@ function checkAnswer() {
 
     if (selectedIndex == question.correct) {
         corrects++
-        correctArray.concat(true)
+        correctArray.push(true)
     } else {
-        correctArray.concat(false)
+        correctArray.push(false)
     }
 
     currentIndex++
@@ -57,28 +57,38 @@ function checkAnswer() {
     if (currentIndex < selectedQuestions.length) {
         renderQuestion(currentIndex)
     } else {
-        questionBox.style.display = "none"
-        postQuiz.style.display = "block"
-        resetButton.style.display = "block"
-        postQuiz.innerHTML = `Você acertou ${corrects} de ${selectedQuestions.length} perguntas.`
-
-        correctArray.forEach((answer, i) => {
-            if (answer) {
-                postQuiz.innerHTML += `<br>A questão ${i + 1} está correta`
-            } else {
-                postQuiz.innerHTML += `<br>A questão ${i + 1} está incorreta`
-            }
-        })
-
-        resetButton.addEventListener("click", () => {
-            currentIndex = 0
-            corrects = 0
-            questionBox.style.display = "block"
-            postQuiz.style.display = "none"
-            resetButton.style.display = "none"
-            renderQuestion(currentIndex)
-        })
+        resetQuiz()
+        return
     }
+}
+
+function resetQuiz() {
+    questionBox.style.display = "none"
+    postQuiz.style.display = "block"
+    resetButton.style.display = "block"
+    postQuiz.innerHTML = `<br>Você acertou ${corrects} de ${selectedQuestions.length} perguntas.<br>`
+
+    correctArray.forEach((answer, i) => {
+        if (answer) {
+            postQuiz.innerHTML += `<br>A questão ${i + 1} está correta`
+        } else {
+            postQuiz.innerHTML += `<br>A questão ${i + 1} está incorreta`
+        }
+    })
+
+    resetButton.addEventListener("click", () => {
+        selectedQuestions = shuffle(questionsJSON.questions).slice(0, MAX_QUESTIONS)
+
+        currentIndex = 0
+        corrects = 0
+        correctArray = []
+
+        questionBox.style.display = "block"
+        postQuiz.style.display = "none"
+        resetButton.style.display = "none"
+
+        renderQuestion(currentIndex)
+    })
 }
 
 nextButton.addEventListener("click", checkAnswer)
